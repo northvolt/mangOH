@@ -125,6 +125,7 @@ kernelModules:
     $CURDIR/linux_kernel_modules/mt7697serial/mt7697serial
 #endif // MANGOH_SUPPORT_MT7697_WIFI
 
+#elif ${MANGOH_BOARD} = GREEN
 /*
  * CAN Bus
  *
@@ -137,7 +138,6 @@ kernelModules:
  * The CAN Bus is COMMENTED OUT by default, please uncomment to use and be sure to comment out
  * spisvc below.
  */
-/*
     $CURDIR/linux_kernel_modules/can_common/can_iot
 #if ${MANGOH_CAN_9X15} = 1
     $CURDIR/linux_kernel_modules/can_9x15/can
@@ -149,9 +149,7 @@ kernelModules:
 #else 
     $CURDIR/linux_kernel_modules/can_9x07/mcp251x
 #endif  // MANGOH_CAN_9X15
-*/
 
-#elif ${MANGOH_BOARD} = GREEN
     $CURDIR/linux_kernel_modules/mangoh/mangoh_green_dv4
 
     /*
